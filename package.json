@@ -1,0 +1,57 @@
+{
+  "name": "cdkey_app",
+  "version": "1.0.0",
+  "description": "cdkey project buy nuxt",
+  "author": "Lemon",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "win": "del/s/q dist.zip && npm run deploy",
+    "mac": "rm -rf dist.zip && npm run deploy",
+    "deploy": "nuxt build && zip -r dist.zip .nuxt server static nuxt.config.js package.json package-lock.json && scp dist.zip root@223.111.134.189:/var/adm/kameng"
+  },
+  "config": {
+    "nuxt": {
+      "host": "127.0.0.1",
+      "port": "8998"
+    }
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/proxy": "^2.0.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "clipboard": "^2.0.6",
+    "cookie-universal-nuxt": "^2.1.4",
+    "copy-to-clipboard": "^3.3.1",
+    "cross-env": "^7.0.2",
+    "echarts": "^4.7.0",
+    "element-ui": "^2.13.2",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-router": "^9.1.0",
+    "md5": "^2.2.1",
+    "moment": "^2.25.3",
+    "nuxt": "^2.0.0",
+    "qrcode": "^1.4.4",
+    "qs": "^6.9.3",
+    "vant": "^2.8.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^2.0.0",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.2"
+  }
+}
