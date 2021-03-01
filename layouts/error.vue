@@ -16,4 +16,4 @@ export default {
 <style scoped>
 a{text-decoration:none;}
 .main{ width:680px; border:1px solid #eba25e; margin:60px auto 0;padding-left:40px; }
-</style>
+</style> 
