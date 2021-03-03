@@ -228,10 +228,11 @@ export default {
       })
       if (res.code === 1001) {
         await this.$store.dispatch('getUserExtend')
-        console.log(this.systemStyle.goPage);
+        // //console.log(this.systemStyle.goPage);
          if(this.systemStyle.goPage == null || this.systemStyle.goPage == 0){
            this.$router.push('/main')
         }else{
+          console.log('/category-list');
            this.$router.push('/category-list')
         }
       }

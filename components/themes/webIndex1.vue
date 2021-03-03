@@ -75,7 +75,7 @@ export default {
     })
   },
   mounted() {
-    console.log(this.systemStyle)
+    //console.log(this.systemStyle)
     if (this.systemStyle.isQun == 1) {
       const iframe = document.createElement('iframe')
       iframe.src = this.systemStyle.qunLink + '?' + new Date().getTime()
@@ -105,7 +105,7 @@ export default {
       })
       if (res.code === 1001) {
         await this.$store.dispatch('getUserExtend')
-         console.log(this.systemStyle.goPage);
+         //console.log(this.systemStyle.goPage);
         if(this.systemStyle.goPage == null || this.systemStyle.goPage == 0){
            this.$router.push('/main')
         }else{

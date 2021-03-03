@@ -7,7 +7,7 @@ function runCode(str) {
       const frag = document.createRange().createContextualFragment(str)
       document.body.appendChild(frag)
     } catch (e) {
-      console.log(e)
+      //console.log(e)
     }
   } else if (str) {
     /* eslint-disable no-eval */

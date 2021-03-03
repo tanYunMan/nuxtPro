@@ -57,7 +57,7 @@ export const mutations = {
     state.browser = browser
   },
   updateSystemStyle(state, style) {
-    console.log(22222222, style)
+    //console.log(22222222, style)
     state.systemStyle = style
   },
   updateIsSupply(state, supply) {

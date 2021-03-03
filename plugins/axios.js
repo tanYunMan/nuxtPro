@@ -27,19 +27,22 @@ export default function({ $axios, redirect, app, req, error }) {
       if (token) {
         config.headers['x-auth-token'] = token
       }
-      console.log(config.headers)
+      //console.log(config.headers)
       if(config.data && config.headers['Content-Type'] === 'application/x-www-form-urlencoded') {
         config.data = qs.stringify(config.data)
       }
       return config
     },
     (error) => {
-      console.log('保存',error)
+      //console.log('保存',error)
       return reject(error.message)
     }
   )
   $axios.interceptors.response.use(
     (response) => {
+      // console.log('拦截信息response',response)
+      // sessionStorage.setItem('keyCode','123465');
+      // console.log('拦截信息response.code',response.data.code)
       if (response.status === 203) {
         user.removeToken(app.$cookies)
         if (process.server) {
@@ -49,6 +52,16 @@ export default function({ $axios, redirect, app, req, error }) {
         // 非法域名，展示404
         if (process.server && response.data.code === 1004) {
           error({ message: '404', statusCode: 404 })
+        }else if (process.server && response.data.code == 1014) {
+          console.log("ccccc1014")
+          // 错误情况
+          // window.alertError &&
+          //   window.alertError(response.data.msg || '网络异常，请稍后再试')
+        }else if (process.server && response.data.code == 1015) {
+          console.log("yyyyy1015")
+          // 错误情况
+          // window.alertError &&
+          //   window.alertError(response.data.msg || '网络异常，请稍后再试')
         } else if (process.browser && response.data.code !== 1001) {
           // 错误情况
           // window.alertError &&

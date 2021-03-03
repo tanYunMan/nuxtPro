@@ -13,7 +13,7 @@
     <!-- 步骤提示 -->
     <div class="tipStyle">
       <ul>
-        <li v-for="(item,index) in tipArray" :key='index'>
+        <li v-for="(item,index) in tipArray" :key='index' style='color: rgb(44,101,240);'>
           {{item}}
         </li>
       </ul>
@@ -29,6 +29,7 @@
 
 <script>
 import copy from 'copy-to-clipboard'
+import { Dialog } from 'vant';
 export default {
   data() {
     return {
@@ -110,13 +111,23 @@ export default {
         //     $(".share_mask").fadeOut();
         //     $(".share_box").fadeOut();
         // });
-        alert("复制成功")
+        // alert("复制成功")
+        Dialog.alert({
+          message: '复制成功',
+        }).then(() => {
+          // on close
+        });
     }else{
         // this.$message.success("复制失败",{time:2000},function(){
         //     $(".share_mask").fadeOut();
         //     $(".share_box").fadeOut();
         // });
-        alert("复制失败")
+        // alert("复制失败")
+        Dialog.alert({
+          message: '复制失败',
+        }).then(() => {
+          // on close
+        });
     }
 }
   },

@@ -81,7 +81,7 @@ export default {
       const e = await $axios.get('/site/advertimg/advertimgList')
       pageData.bannerList = []
       if (e.code === 1001 && e.body) {
-        console.log(e.body)
+        //console.log(e.body)
         pageData.bannerList = e.body
       }
       // qq互联

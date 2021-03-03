@@ -66,7 +66,7 @@ export default {
     }
     let This = this;
     setTimeout(function(){
-      console.log(This.$data.linkMenuDataTop);
+      //console.log(This.$data.linkMenuDataTop);
       for (let i = 0;i < 6; i++){
       This.$data.linkMenuDataTop.push({
         menuLink: "javascript:void(0)",

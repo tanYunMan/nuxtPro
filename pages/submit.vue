@@ -159,11 +159,11 @@ export default {
             cancelButtonText: '取消'
           })
             .then(() => {
-              //  console.log('充值')
+              //  //console.log('充值')
               location.href = `/charge`
             })
             .catch((action) => {
-              //  console.log('取消')
+              //  //console.log('取消')
               loading.close()
             })
 

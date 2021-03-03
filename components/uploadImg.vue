@@ -81,7 +81,7 @@ export default {
     },
     uploadSuccess(response, file, fileList) {  //图片上传成功的方法
       this.uploadPicUrl = `${this.qiniuaddr}/${response.key}`;
-      //console.log(this.uploadPicUrl,111)
+      ////console.log(this.uploadPicUrl,111)
       this.$emit("listenTochildEvent",this.uploadPicUrl);
     },
     uploadError(err, file, fileList) {    //图片上传失败时调用

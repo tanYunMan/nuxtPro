@@ -103,10 +103,10 @@ export default {
         return this.$notify({ type: 'danger', message: '请选择充值支付方式' })
       }
 
-      console.log(this.radio)
+      //console.log(this.radio)
 
       if (this.radio === 'addCard') {
-        console.log(this)
+        //console.log(this)
         if (this.money.length != 32) {
           return this.$notify({
             type: 'danger',

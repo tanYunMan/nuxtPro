@@ -33,7 +33,7 @@ export default {
     }
   },
   created() {
-    console.log(this.qunLink)
+    //console.log(this.qunLink)
   },
   computed: {
     ...mapState({

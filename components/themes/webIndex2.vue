@@ -177,9 +177,9 @@ export default {
         await this.$store.dispatch('getUserExtend')
          console.log(this.systemStyle.goPage);
         if(this.systemStyle.goPage == null || this.systemStyle.goPage == 0){
-           //this.$router.push('/main')
+           this.$router.push('/main')
         }else{
-           //this.$router.push('/category-list')
+           this.$router.push('/category-list')
         }
 
       }

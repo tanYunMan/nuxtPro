@@ -30,7 +30,7 @@ export default {
       const res = await this.$axios.get('/goods/goods/logs', { id: goodsId })
       if (res.code === 1001 && res.body) {
       }
-      console.log(res)
+      //console.log(res)
     },
     hide() {
       this.tableData = []

@@ -1496,14 +1496,14 @@ export default {
                 this.loading = false
               })
               .catch((err) => {
-                console.log(err)
+                //console.log(err)
                 this.loading = false
               })
           } else {
             this.loading = false
           }
         } else {
-          console.log('error submit!!')
+          //console.log('error submit!!')
           return false
         }
       })
@@ -1751,7 +1751,7 @@ export default {
       this.multipleSelection = val
     },
     themeEvent(val) {
-      console.log(val)
+      //console.log(val)
     },
     getChild(item, index) {
       let arr = [
@@ -1783,7 +1783,7 @@ export default {
       this.tableData3 = Object.assign([], this.tableData3)
     },
     themeEvent(val) {
-      console.log(val)
+      //console.log(val)
     }
   }
 }

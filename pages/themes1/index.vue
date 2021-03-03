@@ -14,7 +14,7 @@ export default {
       return ''
     }
     let platform = store.state.platform
-    console.log('platform',platform)
+    //console.log('platform',platform)
     if (req) {
       const userAgent = req.headers['user-agent']
       platform = getPlatform(userAgent)
@@ -84,7 +84,7 @@ export default {
       const e = await $axios.get('/site/advertimg/advertimgList')
       pageData.bannerList = []
       if (e.code === 1001 && e.body) {
-        console.log(e.body)
+        //console.log(e.body)
         pageData.bannerList = e.body
       }
       // qq互联
@@ -99,7 +99,7 @@ export default {
         isBack: false
       })
     }
-    console.log(store.state.platform)
+    //console.log(store.state.platform)
     return {
       page: store.state.platform,
       pageData

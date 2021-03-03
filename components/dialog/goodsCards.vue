@@ -77,7 +77,7 @@ export default {
     deleteCards() {
       const ids = this.selectIds('cardID')
       if (ids.length > 0) {
-        console.log(ids)
+        //console.log(ids)
       } else {
         this.$message.error('请勾选要删除的卡密')
       }

@@ -220,7 +220,7 @@ export default {
       this.tableData.forEach((item) => {
         ids.push(item.catalogID)
       })
-      console.log(ids)
+      //console.log(ids)
     },
     positionMove() {
       const ids = this.selectIds()

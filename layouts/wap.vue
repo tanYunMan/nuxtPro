@@ -58,7 +58,7 @@ body,
   box-sizing: border-box;
   outline: 0;
   -webkit-tap-highlight-color: transparent;
-  color: $--black-text-color;
+  // color: $--black-text-color;
 }
 img {
   width: 100%;

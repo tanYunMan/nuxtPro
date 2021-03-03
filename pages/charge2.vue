@@ -229,7 +229,7 @@ const options = {
         } else if (res.code === 1001 && res.body.qr_code) {
           // 有二维码，当面付
           this.qrCode = res.body.qr_code
-          console.log(this.qrCode)
+          //console.log(this.qrCode)
           this.codeUrl = await QRCode.toDataURL(this.qrCode, options)
           this.outTradeNo = res.body.out_trade_no
           this.payDialog = true
@@ -277,7 +277,7 @@ const options = {
         } else if (res.code === 1001 && res.body.wechat_code) {
           // 有二维码，当面付
           this.qrCode = res.body.wechat_code
-          console.log(this.qrCode)
+          //console.log(this.qrCode)
           this.codeUrl = await QRCode.toDataURL(this.qrCode, options)
           this.outTradeNo = res.body.out_trade_no
           this.payDialog = true

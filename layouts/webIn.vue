@@ -424,11 +424,11 @@
       },
       toUpDatSlider () {
         this.isCollapse = !this.isCollapse
-        console.log(this.isCollapse)
+        //console.log(this.isCollapse)
       },
       getWindowHeight () {
         let bodyDom = window.screen.availHeight;
-        console.log(bodyDom)
+        //console.log(bodyDom)
         this.isWindowHeight = bodyDom - 63
       },
       async getLinkMenuList() {

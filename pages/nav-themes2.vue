@@ -54,13 +54,13 @@ export default {
     selfUpdate
   },
   data() {
-    console.log(this)
+    //console.log(this)
     return {}
   },
   methods:{
     test: function(){
-      console.log(this);
-      console.log('123456789');
+      //console.log(this);
+      //console.log('123456789');
     }
   },
 

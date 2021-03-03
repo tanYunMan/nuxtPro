@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>
-      <span>当前位置：商品目录</span>
+      <span>当前位置：商品目录00</span>
     </h3>
     <recommends></recommends>
     <section class="search">
